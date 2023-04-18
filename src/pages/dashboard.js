@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 
+
 export default function Dashboard(props) {
 
     return  (
@@ -14,6 +15,10 @@ export default function Dashboard(props) {
           </div>
 
         </div>
+
+        <h1>YOOO</h1>
+
+
 
       </div>
     )
