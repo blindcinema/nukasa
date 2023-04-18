@@ -2,19 +2,19 @@ import { IoMdSearch } from "react-icons/io";
 
 export function Navbar(props) {
     return (
-        <div className="Header min-w-full bg-white h-20 flex items-center">
-        <a className="site_logo min-w-max" href="#">
-          <div className=" ml-0 py-5  mr-10 flex items-center">
-              <img src="./svg/LG - Para.svg" className="h-20 ml-2 mr-2 scale-95" />
-              <img src="./svg/Nukasa Text.svg" className="h-10 min-h-10" />  
-          </div>  
-          </a>
+      <div className="Header min-w-full bg-white h-20 flex items-center">
+          <a className="site_logo min-w-max" href="#">
+            <div className=" ml-0 py-5  mr-10 flex items-center">
+                <img src="./svg/LG - Para.svg" className=" logo__image h-20 ml-2 mr-2 scale-[0.8]" />
+                <img src="./svg/Nukasa Text.svg" className=" logo__text h-10 min-h-10 drop-shadow-lg" />  
+            </div>  
+            </a>
 
         <div className="spacer w-3/5"></div>
 
         <div className="navbar flex items-center w-max h-full">
 
-          <ul className= "navlist text-lg inline-flex p-1 flex-row place-content-between mr-10 text-[#9B4C44] font-[600]">
+          <ul className= "navlist text-lg inline-flex p-1 flex-row place-content-between mr-10 text-[#9B4C44] font-[600] drop-shadow-lg">
             
             <li className="group pr-20 relative">
               <a className="hover:text-[#6A3630]" href="#">Home</a>
