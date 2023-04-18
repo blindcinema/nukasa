@@ -22,7 +22,7 @@ export function Navbar(props) {
 
             
             <li className="group pr-20 relative"><div className="hover:text-[#6A3630]">Education</div>
-              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col bg-white absolute flex-wrap ">
+              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap ">
                 <a className="mt-2 hover:text-[#6A3630]" href="#">Sound Design</a>
                 <a className="mt-2 hover:text-[#6A3630]" href="#">Arrangement</a>
                 <a className="mt-2 hover:text-[#6A3630]" href="#">Theory/Songwriting</a>
@@ -33,7 +33,7 @@ export function Navbar(props) {
             </li>
             
             <li className="group pr-20 relative"><div className="hover:text-[#6A3630]">Glossary</div>
-              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col bg-white absolute flex-wrap">
+              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap">
                   <a className="mt-2 hover:text-[#6A3630]" href="#">ASDF</a>
                   <a className="mt-2 hover:text-[#6A3630]" href="#">YE</a>
                   <a className="mt-2 hover:text-[#6A3630]" href="#">ALONG ASS PIECE OF TEXT LMAO THIS IS LOOOONG</a>
@@ -41,12 +41,12 @@ export function Navbar(props) {
               </li>
               
             <li className="group pr-20 relative"><div className="hover:text-[#6A3630]">Lessons</div>
-              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col bg-white absolute flex-wrap">
+              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap">
                 </div>
             </li>
 
             <li className="group pr-20 relative"><div className="hover:text-[#6A3630]">Blogs</div>
-              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col bg-white absolute flex-wrap ">
+              <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap ">
               <a className="mt-2 hover:text-[#6A3630]" href="#">ASDF</a>
                   <a className="mt-2 hover:text-[#6A3630]" href="#">YE</a>
                   <a className="mt-2 hover:text-[#6A3630]" href="#">ALONG ASS PIECE OF TEXT LMAO THIS IS LOOOONG</a>
