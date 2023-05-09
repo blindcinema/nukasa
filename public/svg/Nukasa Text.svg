@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1003.65 199.38">
+<defs>
+    <style>
+    @font-face{
+        font-family: "Jaapokki";
+    src: url("/fonts/jaapokkisubtract-regular.woff") format("woff");
+    }
+
+.cls-1{fill:#9b4c44;font-family:Jaapokki;font-size:251.22px;}
+.cls-2{letter-spacing:-.07em;}
+.cls-3{letter-spacing:-.04em;}
+</style></defs><text class="cls-1" transform="translate(-10.92 189.06)"><tspan x="0" y="0">NU</tspan><tspan class="cls-3" x="337.64" y="0">K</tspan><tspan class="cls-2" x="495.91" y="0">A</tspan><tspan class="cls-3" x="679.06" y="0">S</tspan><tspan x="818.99" y="0">A</tspan></text></svg>

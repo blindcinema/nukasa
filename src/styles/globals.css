@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Oswald";
+  src: url("../../public/fonts/Oswald-Regular.ttf") format("truetype");
+
+}
+@font-face {
+  font-family: "Jaapokki";
+  src: url("../../public/fonts/jaapokkisubtract-regular.woff") format("woff");
+
+}
+
+:root {
+  --nukasa_red: #6A3630;
+  --nukasa_champagne: #F6E2C9;
+  --nukasa_purple: #29294E;
+  --nukasa_purple_highlight: #7777e02d;
+  --font-nukasa_logo: "Jaapokki"
+}
+
+
+html {
+  overflow-y: hide;
+  overflow-x: hide;
+  }
+html h1, h2 {
+  font-family: "Oswald";
+}
