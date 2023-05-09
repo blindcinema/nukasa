@@ -6,13 +6,10 @@ transform: rotate(180deg);
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
-border-left: white solid 1px;
-border-bottom: white solid 1px;
+border: white solid 1px;
+
 }
 
-.stripe_text:first-child {
-    margin-top: 0.75rem;
-}
 .stripe_text {
 cursor: pointer;
 writing-mode: vertical-lr;

@@ -1,9 +1,11 @@
 import { Navbar } from "@/components/Navbar";
+import MoreButton from "@/components/MoreButton";
 import { useRouter } from "next/router";
 import { PostCard, PostWidget, Categories } from "../components";
 import { getPosts } from "../../services";
 import Head from 'next/head'
 import FeaturedPost from "@/components/FeaturedPost";
+import NewestPost from "@/components/NewestPost";
 
 export default function Dashboard({ posts }) {
     const router = useRouter();
@@ -15,13 +17,28 @@ export default function Dashboard({ posts }) {
   function goToLoginPage(){
     router.push("/login");
 }
+const featuredPostElement = posts.map ((post,index) => {
+  if (post.node.featuredPost === true)
+  return <FeaturedPost post = {post.node} key= {post.node.title} />
+  else return;
+})
+const maxDate = new Date(Math.max(
+  ...posts.map(post => {
+     return new Date(post.node.createdAt)
+  })));
 
-  const featuredPostElement = posts.map ((post,index) => {
-    if (post.node.featuredPost === true)
-      return <FeaturedPost post = {post.node} key= {post.title} />
-    else return;
-    })
+// FILTERING NEWEST POST TO SHOW ON PAGE
+const newestPostElement =
+  posts
+  .filter((post) => {
+    const postDate = new Date(post.node.createdAt).getTime();
+    return postDate  === maxDate.getTime();
+  })
+  .map((post,index) => {
+     return <NewestPost post= {post.node} key={post.node.title} />
+     })
 
+    
     return  (
     <>
       <Head>
@@ -62,7 +79,14 @@ export default function Dashboard({ posts }) {
             <div>
               <div>
                 {featuredPostElement}
-
+                <div className=" mr-4 ml-8 mb-12">
+                  <div className="text-6xl after:border-[--nukasa_purple] after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
+                    <MoreButton className="absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
+                    <h2 className="ml-0 text-[--nukasa_red]">Fresh out the Oven</h2>
+                    </div>
+                {newestPostElement}
+                </div>
+                
               </div>
             </div>
           </main>
