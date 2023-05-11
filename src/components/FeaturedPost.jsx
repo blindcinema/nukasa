@@ -5,7 +5,7 @@ export default function FeaturedPost({ post }) {
 
     return (
         <Link className="bg-[#EFCC5F] flex us:h-48 sm:h-64 md:h-96 overflow-hidden cursor-pointer mb-9" href={post.slug}>
-            <div style={{backgroundImage:`url(${bgImg})`}} alt="temp" className="us:w-32 sm:w-48 md:w-72 lg:h-auto lg:w-4/12 bg-no-repeat bg-cover"></div>
+            <div style={{backgroundImage:`url(${bgImg})`}} alt="temp" className="us:w-32 sm:w-48 md:w-72 lg:h-auto lg:w-4/12 bg-no-repeat md:bg-cover aspect-square bg-center"></div>
 
             <div className={`${styles.vertical_stripe} sm:text-xs sm:w-4 md:text-lg md:w-5 lg:w-5 lg:leading-3`}>
                     <div className={`${styles.stripe_text} us:mb-6 sm:mb-12 us:text-[0.5rem] us:leading-[0.9rem] md:text-sm md:mr-4 lg:mb-12 `}>{post.categories[0].name}</div>

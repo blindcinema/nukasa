@@ -85,11 +85,12 @@ const newestPostElement =
                 {featuredPostElement}
                 <div className=" ml-8 mb-12 flex flex-col">
                   <div className="text-6xl after:border-[--nukasa_purple] after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
-                    <MoreButton className="absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
+                    <MoreButton className="us:hidden sm:block absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
                     <h2 className="ml-0 text-[--nukasa_red]">Fresh out the Oven</h2>
                     </div>
                 {newestPostElement}
                 {olderPostsElement}
+                
                 </div>
                 
               </div>
