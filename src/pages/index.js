@@ -2,11 +2,13 @@ import { Navbar } from "@/components/Navbar";
 import MoreButton from "@/components/MoreButton";
 import { useRouter } from "next/router";
 import { PostCard, PostWidget, Categories } from "../components";
+import  NukasaTitleComponent  from "../../public/svg/Nukasa Text.svg"
 import { getPosts } from "../../services";
 import Head from 'next/head'
 import FeaturedPost from "@/components/FeaturedPost";
 import NewestPost from "@/components/NewestPost";
 import OlderPosts from "@/components/OlderPosts";
+import ColorPosts from "@/components/ColorPosts";
 
 export default function Dashboard({ posts }) {
     const router = useRouter();
@@ -83,13 +85,15 @@ const newestPostElement =
             <div>
               <div>
                 {featuredPostElement}
-                <div className=" ml-8 mb-12 flex flex-col">
-                  <div className="text-6xl after:border-[--nukasa_purple] after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
+                <div className=" mb-12 flex flex-col">
+                  <div className="text-6xl after:border-[--nukasa_purple] after:ml-2 after:mr-2 after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
                     <MoreButton className="us:hidden sm:block absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
-                    <h2 className="ml-0 text-[--nukasa_red]">Fresh out the Oven</h2>
+                    <h2 className="ml-8 text-[--nukasa_red]">Fresh out the Oven</h2>
                     </div>
                 {newestPostElement}
                 {olderPostsElement}
+                <div className="flex"><NukasaTitleComponent className=" logo__text us:h-5 md:h-10 min-h-10 ml-32" /> <span className="flex content-center mt-auto mb-auto ml-12 text-4xl tracking-wider font-[Oswald] text-[--nukasa_red]">Personal Blogs and Audiobites</span></div>
+                <ColorPosts post={posts}/>
                 
                 </div>
                 
