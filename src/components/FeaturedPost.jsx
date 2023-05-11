@@ -1,9 +1,10 @@
 import styles from "./FeaturedPost.module.css";
+import Link from "next/link";
 export default function FeaturedPost({ post }) {
     const bgImg = post.featuredImage.url;
 
     return (
-        <div className="bg-[#EFCC5F] flex us:h-48 sm:h-64 md:h-96 overflow-hidden cursor-pointer mb-8">
+        <Link className="bg-[#EFCC5F] flex us:h-48 sm:h-64 md:h-96 overflow-hidden cursor-pointer mb-9" href={post.slug}>
             <div style={{backgroundImage:`url(${bgImg})`}} alt="temp" className="us:w-32 sm:w-48 md:w-72 lg:h-auto lg:w-4/12 bg-no-repeat bg-cover"></div>
 
             <div className={`${styles.vertical_stripe} sm:text-xs sm:w-4 md:text-lg md:w-5 lg:w-5 lg:leading-3`}>
@@ -18,6 +19,6 @@ export default function FeaturedPost({ post }) {
                 
                 <div className="uppercase font-[Oswald] us:text-xs mt-1 mb-1 us:mt-8 md:mt-12 md:text-base md:pl-12"> by {post.author.name}</div>
             </div>
-        </div>
+        </Link>
     )
 }

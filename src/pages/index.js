@@ -6,6 +6,7 @@ import { getPosts } from "../../services";
 import Head from 'next/head'
 import FeaturedPost from "@/components/FeaturedPost";
 import NewestPost from "@/components/NewestPost";
+import OlderPosts from "@/components/OlderPosts";
 
 export default function Dashboard({ posts }) {
     const router = useRouter();
@@ -38,6 +39,9 @@ const newestPostElement =
      return <NewestPost post= {post.node} key={post.node.title} />
      })
 
+     const olderPostsElement = <OlderPosts posts ={posts}/>
+
+
     
     return  (
     <>
@@ -53,7 +57,7 @@ const newestPostElement =
       
     <div>
 
-        <div className="wrapper min-h-screen  bg-[#F6E2C9] ">
+        <div className="wrapper bg-[#F6E2C9] ">
 
           <div className="nav-wrappertop-0 shadow-sm shadow-stone-500">
 
@@ -79,12 +83,13 @@ const newestPostElement =
             <div>
               <div>
                 {featuredPostElement}
-                <div className=" mr-4 ml-8 mb-12">
+                <div className=" ml-8 mb-12 flex flex-col">
                   <div className="text-6xl after:border-[--nukasa_purple] after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
                     <MoreButton className="absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
                     <h2 className="ml-0 text-[--nukasa_red]">Fresh out the Oven</h2>
                     </div>
                 {newestPostElement}
+                {olderPostsElement}
                 </div>
                 
               </div>
