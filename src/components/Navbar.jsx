@@ -30,21 +30,37 @@ export function Navbar(props) {
   function handleSubmit() {
     alert("This eventually leads to a list with searched stuff and filters")
   }
+  const [stickyState, setStickyState] = useState("");
+  const headerRef = useRef("headerRef");
+  
+/*   useEffect(()=> {
+    const element = document.getElementById("header");
+    let fixedTop = headerRef.current.offsetTop;
+    const fixedHeader = () => {
+      if (window.scrollY > fixedTop) {
+      
+        setStickyState("fixed");
+      } else {
+        setStickyState("");
+        
+      }
+    }
+    window.addEventListener("scroll", fixedHeader);
+    },[headerRef]) */
 
     return (
       
-      <div className="Header us:min-w-full bg-white h-16 flex items-center">
-          <div className=" fixed top-[12px] text-[#6A3630] right-0 sm:hidden" onClick={handleNav}>
+      <div className={`Header min-w-full bg-white h-16 shadow-md top-0 flex items-center z-20 box-border fixed  `} id="header" ref={headerRef}>
+          <div className="absolute text-[#6A3630] right-0 sm:hidden" onClick={handleNav}>
             {!navState ? <IoIosClose size={42} /> : <HiOutlineMenu size={42} />}
           </div>
           <Link className="site_logo min-w-max sm:mr-4 md:mr-0" href="#">
-            <div className=" ml-0 py-5 flex items-center">
+            <div className=" ml-0  flex items-center">
               <img src="./svg/LG - Para.svg" className="logo__image us:scale-100 us:h-16 sm:h-20 sm:ml-2 mr-2 sm:scale-[0.8]" />
               <NukasaTitleComponent className=" logo__text us:h-5 md:h-10 min-h-10 drop-shadow-lg sm:flex" />
                
             </div>  
             </Link>
-
         <div className="spacer w-3/5"></div>
         <div className={ navState ? " fixed left-[-100%]" : "mobile__nav us:block fixed top-0 left-0 min-h-full bg-white z-10 ease-in-out duration-100 flex" }>
         <ul className= "navlist text-lg text-[#9B4C44] font-[600] ">

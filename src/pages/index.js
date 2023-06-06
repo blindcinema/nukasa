@@ -9,6 +9,7 @@ import FeaturedPost from "@/components/FeaturedPost";
 import NewestPost from "@/components/NewestPost";
 import OlderPosts from "@/components/OlderPosts";
 import ColorPosts from "@/components/ColorPosts";
+import Link from "next/link";
 
 export default function Dashboard({ posts }) {
     const router = useRouter();
@@ -61,16 +62,17 @@ const newestPostElement =
 
         <div className="wrapper bg-[#F6E2C9] ">
 
-          <div className="nav-wrappertop-0 shadow-sm shadow-stone-500">
+          <div className="nav-wrapper">
 
             <Navbar onLogin ={goToLoginPage}/>
-            <div className="stripe bg-[#29294E] h-5 sm:h-10 w-full flex items-center text-2xl leading-10 ">
+            
+
+          </div>
+          <main className=" blog_container flex justify-center flex-col mt-16">
+          <div className="stripe bg-[#29294E] h-5 sm:h-10 w-full flex items-center text-2xl leading-10 ">
               <div className="stripe__spacer w-2/12"></div>
               <div className="text-sm sm:text-2xl text-white mr-2 drop-shadow-lg " >TAKE IT EASY; </div> <div className="text-sm sm:text-2xl text-[#F6E2C9] drop-shadow-lg"> BUT TAKE IT</div>
             </div>
-
-          </div>
-          <main className=" blog_container flex justify-center flex-col">
 {/*             <div className="blog_item">
               <div>
                 { posts.map((post,index) => (
@@ -86,13 +88,19 @@ const newestPostElement =
               <div>
                 {featuredPostElement}
                 <div className=" mb-12 flex flex-col">
-                  <div className="text-6xl after:border-[--nukasa_purple] after:ml-2 after:mr-2 after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after: after:block">
-                    <MoreButton className="us:hidden sm:block absolute right-12 top-[33.5rem] hover:bg-yellow-400 text-5xl">More</MoreButton>           
-                    <h2 className="ml-8 text-[--nukasa_red]">Fresh out the Oven</h2>
-                    </div>
+                  <header className="flex flex-col content-center text-6xl after:border-[--nukasa_purple] after:ml-2 after:mr-2 after:border-4 after:rounded-2xl after:mt-4 after:mb-8 after:h-px after:block">                              
+                    <Link href={"#"} className=" us:hidden sm:flex text-3xl self-end mr-4 cursor-pointer relative top-16 " >
+                      <span className="mr-1">More</span>
+                      <MoreButton className=" hover:bg-[#EFCC5F] hover:rounded-full scale-75" />                  
+                    </Link>
+                    <h2 className="ml-8 text-[--nukasa_red] ">Fresh out the Oven</h2>  
+                    </header>
                 {newestPostElement}
                 {olderPostsElement}
-                <div className="flex"><NukasaTitleComponent className=" logo__text us:h-5 md:h-10 min-h-10 ml-32" /> <span className="flex content-center mt-auto mb-auto ml-12 text-4xl tracking-wider font-[Oswald] text-[--nukasa_red]">Personal Blogs and Audiobites</span></div>
+                <div className="flex flex-row us:ml-8 us:mr-8 items-center">
+                  <NukasaTitleComponent className=" logo__text us:hidden sm:block max-h-8 h-8 mr-8 translate-y-1 " /> 
+                  <span className="inline-block text-4xl tracking-wider font-[Oswald] text-[--nukasa_red]">Personal Blogs and Audiobites</span>
+                </div>
                 <ColorPosts post={posts}/>
                 
                 </div>

@@ -1,9 +1,10 @@
-import Link from "next/link";
+
+import { BsArrowRightCircle } from "react-icons/Bs"
 
 export default function MoreButton(props) {
     return (
-        <div>
-            <Link href={"#"} className={props.className}>{props.children}&gt; </Link>
-        </div>
+        <span className={ `${props.className}`} >
+            <BsArrowRightCircle size={props.size || 42}  />
+        </span>
     )
 }
