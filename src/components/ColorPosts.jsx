@@ -1,4 +1,4 @@
-import styles from "./ColorPosts.module.css";
+
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import MoreButton from "./MoreButton";
