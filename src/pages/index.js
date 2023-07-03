@@ -68,7 +68,7 @@ const newestPostElement =
             
 
           </div>
-          <main className=" blog_container flex justify-center flex-col mt-16">
+          <main className="flex justify-center flex-col mt-16">
           <div className="stripe bg-[#29294E] h-5 sm:h-10 w-full flex items-center text-2xl leading-10 ">
               <div className="stripe__spacer w-2/12"></div>
               <div className="text-sm sm:text-2xl text-white mr-2 drop-shadow-lg " >TAKE IT EASY; </div> <div className="text-sm sm:text-2xl text-[#F6E2C9] drop-shadow-lg"> BUT TAKE IT</div>
