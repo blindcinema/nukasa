@@ -1,5 +1,5 @@
 
-import { BsArrowRightCircle } from "react-icons/Bs";
+import { BsArrowRightCircle } from "react-icons/bs";
 
 export default function MoreButton(props) {
     return (
