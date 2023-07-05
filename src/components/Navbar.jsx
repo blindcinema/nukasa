@@ -65,24 +65,24 @@ export function Navbar(props) {
         <div className={ navState ? " fixed left-[-100%]" : "mobile__nav us:block fixed top-0 left-0 min-h-full bg-white z-10 ease-in-out duration-100 flex" }>
         <ul className= "navlist text-lg text-[#9B4C44] font-[600] ">
             
-            <li className="pt-8 drop-shadow-lg">
-              <Link className="hover:text-[#6A3630]" href="#">Home</Link>
+            <li className="pt-8 drop-shadow-lg cursor-pointer">
+              <Link className="hover:text-[#6A3630]" href="/">Home</Link>
             </li>
   
-            <li className="pt-8 drop-shadow-lg">
+            <li className="pt-8 drop-shadow-lg cursor-pointer">
               <Link className="hover:text-[#6A3630]" href="#">Education</Link>
             </li>
             
-            <li className="pt-8 drop-shadow-lg">
+            <li className="pt-8 drop-shadow-lg cursor-pointer">
               <Link className="hover:text-[#6A3630]" href="#">Glossary</Link>
               </li>
               
-            <li className="pt-8 drop-shadow-lg">
+            <li className="pt-8 drop-shadow-lg cursor-pointer">
               <Link className="hover:text-[#6A3630]" href="#">Lessons</Link>
             </li>
 
-            <li className="pt-8 drop-shadow-lg">
-              <Link className="hover:text-[#6A3630]" href="#">Blogs</Link>
+            <li className="pt-8 drop-shadow-lg cursor-pointer">
+              <Link className="hover:text-[#6A3630]" href="/blogs.jsx">Blogs</Link>
             </li>
 
             <li className="pt-8 shadow-sm">
@@ -100,12 +100,12 @@ export function Navbar(props) {
           <ul className= "navlist text-lg inline-flex p-1 flex-row place-content-between text-[#9B4C44] font-[600] drop-shadow-lg sm:text-sm md:text-lg">
             
             <li className="group pr-5 relative xl:pr-20">
-              <a className="hover:text-[#6A3630]" href="#">Home</a>
+              <Link className="hover:text-[#6A3630]" href="/">Home</Link>
             </li>
 
             
-            <li className="group pr-5 relative xl:pr-20">
-              <div className="hover:text-[#6A3630]">Education</div>
+            <li className="group pr-5 relative xl:pr-20 cursor-pointer">
+              <Link href={"/education"} className="hover:text-[#6A3630]">Education</Link>
               <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap">
                 <Link className="mt-2 hover:text-[#6A3630]" href="#">Sound Design</Link>
                 <Link className="mt-2 hover:text-[#6A3630]" href="#">Arrangement</Link>
@@ -116,20 +116,20 @@ export function Navbar(props) {
               </div>
             </li>
             
-            <li className="group pr-5 relative xl:pr-20">
-              <div className="hover:text-[#6A3630]">Glossary</div>
+            <li className="group pr-5 relative xl:pr-20 cursor-pointer">
+              <Link href={"/glossary"} className="hover:text-[#6A3630]">Glossary</Link>
               <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap">
                 </div>
               </li>
               
-            <li className="group pr-5 relative xl:pr-20">
-              <div className="hover:text-[#6A3630]">Lessons</div>
+            <li className="group pr-5 relative xl:pr-20 cursor-pointer">
+              <Link href={"/lessons"} className="hover:text-[#6A3630]">Lessons</Link>
               <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap">
                 </div>
             </li>
 
-            <li className="group pr-4 relative lg:pr-4 xl:pr-20">
-              <div className="hover:text-[#6A3630]">Blogs</div>
+            <li className="group pr-4 relative lg:pr-4 xl:pr-20 cursor-pointer">
+              <Link href={"/blogs"} className="hover:text-[#6A3630]">Blogs</Link>
               <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap ">
               <a className="mt-2 hover:text-[#6A3630]" href="#">ASDF</a>
                   <Link className="mt-2 hover:text-[#6A3630]" href="#">YE</Link>

@@ -73,17 +73,6 @@ const newestPostElement =
               <div className="stripe__spacer w-2/12"></div>
               <div className="text-sm sm:text-2xl text-white mr-2 drop-shadow-lg " >TAKE IT EASY; </div> <div className="text-sm sm:text-2xl text-[#F6E2C9] drop-shadow-lg"> BUT TAKE IT</div>
             </div>
-{/*             <div className="blog_item">
-              <div>
-                { posts.map((post,index) => (
-                  <PostCard post={post.node} key={post.title} />
-                )) }
-              </div>
-              <div>
-                <PostWidget />
-                <Categories />
-              </div>
-          </div> */}
             <div>
               <div>
                 {featuredPostElement}

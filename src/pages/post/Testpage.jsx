@@ -3,6 +3,7 @@ import { doc, getDoc, collection, getDocs, query, updateDoc, setDoc } from "fire
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { UserAuth } from "@/context/AuthContext"
 import { useEffect, useState } from "react";
+import { GetServerSideProps } from "next";
 export default function Testpage() {
     const storage = getStorage();
     const imageRef = ref(storage, );
