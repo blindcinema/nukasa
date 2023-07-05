@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import localFont from 'next/font/local'
 import { Inter } from "next/font/google"
+import { AuthContextProvider } from '@/context/AuthContext'
 const inter = Inter({
   subsets: ["latin"],
   variable: '--font-inter',
@@ -21,7 +22,9 @@ export default function App({ Component, pageProps }) {
 
   return <>
     <div >
-      <Component {...pageProps} />
+      <AuthContextProvider>
+        <Component {...pageProps} />
+      </AuthContextProvider>
     </div>
   </>
 }
