@@ -10,6 +10,7 @@ import NewestPost from "@/components/NewestPost";
 import OlderPosts from "@/components/OlderPosts";
 import ColorPosts from "@/components/ColorPosts";
 import Link from "next/link";
+import { PageContextProvider } from "@/context/PageContext";
 
 export default function Dashboard({ posts }) {
     const router = useRouter();

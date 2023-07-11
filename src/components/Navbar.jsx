@@ -54,7 +54,7 @@ export function Navbar(props) {
           <div className="absolute text-[#6A3630] right-0 sm:hidden" onClick={handleNav}>
             {!navState ? <IoIosClose size={42} /> : <HiOutlineMenu size={42} />}
           </div>
-          <Link className="site_logo min-w-max sm:mr-4 md:mr-0" href="#">
+          <Link className="site_logo min-w-max sm:mr-4 md:mr-0" href="/">
             <div className=" ml-0  flex items-center">
               <img src="./svg/LG - Para.svg" className="logo__image us:scale-100 us:h-16 sm:h-20 sm:ml-2 mr-2 sm:scale-[0.8]" />
               <NukasaTitleComponent className=" logo__text us:h-5 md:h-10 min-h-10 drop-shadow-lg sm:flex" />

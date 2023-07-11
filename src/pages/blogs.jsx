@@ -1,16 +1,17 @@
 import { collection, getDocs } from "firebase/firestore";
 import { getDownloadURL } from "firebase/storage";
 import { GetServerSideProps } from "next";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { db } from "@/firebase";
 import { Navbar } from "@/components/Navbar";
 import Link from "next/link";
+import { PageContext, PageContextProvider } from "@/context/PageContext";
 
 
 export default function Blogs() {
-
-   const [blogs, setBlogs] = useState();
-   const [blogsId, setBlogsId] = useState();
+    const context = useContext(PageContext);
+    const [blogs, setBlogs] = useState();
+    const [blogsId, setBlogsId] = useState();
     const blogsRef = collection(db, "blog");
     useEffect(()=> {
         const blogArray = [];
@@ -32,6 +33,7 @@ export default function Blogs() {
     },[]) 
 
     return (
+    <>
         <div className="">
             <Navbar  />
             <div className="mt-16 flex w-full flex-col" >
@@ -45,7 +47,7 @@ export default function Blogs() {
              {blogs.map((item,index) => {
                 const trimmedurl = Array.from(item.name).filter((char) => {return char !== " "}).join("").toLowerCase();
                 return <li key={trimmedurl} className="">
-                    <Link href={{pathname: `post/${trimmedurl}`, query: { post: item.id }}} >{item.name}</Link>
+                    <Link href={{pathname: `post/${trimmedurl}`, query: { post: item.id }}}  >{item.name}</Link>
                 </li>
                 
             
@@ -55,5 +57,6 @@ export default function Blogs() {
             </ul>  }
             </div>
         </div>
+    </>
     )
 }
