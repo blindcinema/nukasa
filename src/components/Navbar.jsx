@@ -131,12 +131,12 @@ export function Navbar(props) {
             <li className="group pr-4 relative lg:pr-4 xl:pr-20 cursor-pointer">
               <Link href={"/blogs"} className="hover:text-[#6A3630]">Blogs</Link>
               <div className="navlist__dropdown shadow-lg hidden group-hover:flex flex-col pl-2 pr-2 bg-white absolute flex-wrap ">
-              <a className="mt-2 hover:text-[#6A3630]" href="#">ASDF</a>
+              <a className="mt-2 hover:text-[#6A3630]" href="#">TEMP</a>
                   <Link className="mt-2 hover:text-[#6A3630]" href="#">YE</Link>
-                  <Link className="mt-2 hover:text-[#6A3630]" href="#">ALONG ASS PIECE OF TEXT LMAO THIS IS LOOOONG</Link>
+                  <Link className="mt-2 hover:text-[#6A3630]" href="#">LONG PIECE OF TEXT fOr TesTING TesTING TesTING </Link>
                   <Link className="mt-2 hover:text-[#6A3630]" href="#">ASDF</Link>
                   <Link className="mt-2 hover:text-[#6A3630]" href="#">YE</Link>
-                  <Link className="mt-2 hover:text-[#6A3630]" href="#">ALONG ASS PIECE OF TEXT LMAO THIS IS LOOOONG</Link>
+                  <Link className="mt-2 hover:text-[#6A3630]" href="#">LONG PIECE OF TEXT fOr TesTING TesTING TesTING </Link>
                 </div>
             </li>
 
