@@ -37,8 +37,7 @@ export default function Page({query}) {
         grabPost();
         
     },[])
-    console.log(context.contextQuery);
-
+    console.log(post);
 
     // TODO image
     return (
